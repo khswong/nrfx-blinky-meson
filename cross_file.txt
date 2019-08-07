@@ -1,0 +1,20 @@
+[binaries]
+c       = 'arm-none-eabi-gcc'
+cpp     = 'arm-none-eabi-g++'
+ld      = 'arm-none-eabi-ld'
+ar      = 'arm-none-eabi-ar'
+as      = 'arm-none-eabi-as'
+size    = 'arm-none-eabi-size'
+objdump = 'arm-none-eabi-objdump'
+objcopy = 'arm-none-eabi-objcopy'
+strip   = 'arm-none-eabi-strip'
+gdb     = 'arm-none-eabi-gdb'
+
+[properties]
+c_args = ['-Wall', '-ffreestanding', '-ffunction-sections', '-fdata-sections', '-fno-strict-aliasing', '-fno-builtin', '-mcpu=cortex-m0', '-mthumb']
+
+[host_machine]
+cpu_family = 'arm'
+system     = 'none'
+cpu        = 'cortex-m0'
+endian     = 'little'
