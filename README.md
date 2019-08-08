@@ -17,7 +17,7 @@ an LED on the BBC micro:bit is included.
 # Debug
 
     openocd -f /usr/share/openocd/scripts/interface/cmsis-dap.cfg \
-            -f /usr/share/openocd/target/nrf51.cfg &
+            -f /usr/share/openocd/scripts/target/nrf51.cfg &
 
     arm-none-eabi-gdb build/blinky.elf
     target remote localhost:3333
