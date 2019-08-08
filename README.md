@@ -4,7 +4,8 @@ an LED on the BBC micro:bit is included.
 # Requirements
 
  - meson (tested with 0.49.2)
- - GNU Arm Embedded Toolchain (tested with gcc-arm-none-eabi-8-2018-q4-major, other versions and toolchains may work too)
+ - ninja (tested with 1.8.2)
+ - GNU Arm Embedded Toolchain (tested with gcc-arm-none-eabi-8-2018-q4-major)
 
 # Build
 
