@@ -10,7 +10,7 @@ nrfx_include = [
 ]
 
 nrfx_sources = files([
-  'nrfx/mdk/gcc_startup_nrf51.S',
+  'nrfx/mdk/gcc_startup_nrf52840.S',
   'nrfx/mdk/system_nrf51.c',
   'nrfx/drivers/src/nrfx_adc.c',
   'nrfx/drivers/src/nrfx_clock.c',
@@ -57,7 +57,7 @@ c_args = [
 
 link_args = [
   '-Wl,-L' + join_paths(meson.current_source_dir(), 'nrfx/mdk'),
-  '-Wl,-T' + join_paths(meson.current_source_dir(), 'nrfx/mdk/nrf51_xxaa.ld'),
+  '-Wl,-T' + join_paths(meson.current_source_dir(), 'nrfx/mdk/nrf52840_xxaa.ld'),
 ]
 
 # nrfx needs to have the full project includes in order to see nrfx_config.h

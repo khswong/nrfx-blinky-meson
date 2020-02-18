@@ -16,5 +16,5 @@ c_args = ['-Wall', '-ffreestanding', '-ffunction-sections', '-fdata-sections', '
 [host_machine]
 cpu_family = 'arm'
 system     = 'none'
-cpu        = 'cortex-m0'
+cpu        = 'cortex-m4'
 endian     = 'little'

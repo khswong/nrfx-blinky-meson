@@ -10,6 +10,7 @@
 #include <nrfx_rtc.h>
 #include <nrfx_clock.h>
 #include <nrf_gpio.h>
+#include "pca10056.h"
 
 /*
  * These pins correspond to the top left LED on the BBC micro:bit
@@ -28,8 +29,7 @@ void rtc0_event(nrfx_rtc_int_type_t int_type) {
 }
 
 int main(int argc, char **argv) {
-    nrf_gpio_cfg_output(ROW1);
-    nrf_gpio_cfg_output(COL1);
+    nrf_gpio_cfg_output(BSP_LED_0);
 
     nrf_gpio_pin_set(ROW1);
 
@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
          * appears to be blinking at 4 Hz
          */
         if(ticks & 1) {
-            nrf_gpio_pin_toggle(COL1);
+            nrf_gpio_pin_toggle(BSP_LED_0);
         }
     }
 
